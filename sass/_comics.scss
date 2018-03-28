@@ -1,0 +1,50 @@
+
+
+.comics_examples {
+    padding-left: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+.comics_examples container {
+    text-align: center;
+    margin: 0 auto;
+    
+
+}
+.comics_examples ul, .comics_examples ul li {
+    margin-top: 0px;
+}
+
+.comics_examples .heading h1 {
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+}
+
+.comics_examples .heading {
+    padding-top: 100px;
+    padding-bottom: 0px;
+}
+
+.comics_examples .container-full {
+    margin-bottom: 0 px;
+    width: 100%;
+}
+
+.comics_examples .yellow {
+    background-color: $second_color;
+     @include background-image(radial-gradient(circle, rgba($second_color2, 1), rgba($second_color, 1)));
+}
+
+.container_img {
+    margin: 0 auto;
+    min-width: 151px;
+    max-width: 400px;
+}
+
+.container_img img {
+    width: 100%;
+}
+

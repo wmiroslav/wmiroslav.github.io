@@ -1,0 +1,69 @@
+
+//// gornji deo
+.container-full {
+    position: relative;
+    width: 100%;
+    background-color: $main_gradient2;
+    @include background-image(radial-gradient(circle, rgba($main_gradient2, 1), rgba($main_gradient1, 1)));
+    padding-top:130px;
+    padding-bottom: 110px;
+}
+
+.container {
+    max-width: $max_width;
+    width: 100%;
+    margin: 0 auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    box-sizing: border-box;
+}
+
+.text {
+    text-align: right;
+    width: 30%;
+    float: left;
+}
+.third a:hover {
+    color: burlywood;
+}
+
+
+
+///// dodnji deo
+.container-down {
+    background-color: $second_color;
+     @include background-image(radial-gradient(circle, rgba($second_color2, 1), rgba($second_color, 1)));
+    padding-bottom: 120px;
+}
+
+.circle {
+    margin: 0 auto;
+    display: inline-block;
+    padding: 15px;
+    border: 2px $text_color solid;
+    @include border-radius(50%, 50%);
+    margin-bottom: 15px;
+    max-width: 90%;
+}
+.circle img {
+    max-width: 100%;
+}
+.third {
+    box-sizing: border-box;
+    padding: 10px;
+    margin-top: 120px;
+    width: 33.3%;
+    float: left;
+    text-align: center;
+}
+.third p {
+    margin: 0 auto;
+    max-width: 550px;
+}
+
+
+@media (max-width: 700px) {
+    .third {
+        width: 100%;
+    }
+}

@@ -1,0 +1,273 @@
+
+
+
+
+
+/////////NAVIGATION ////////////
+.container-nav-full {
+    position: fixed;
+    top:0;
+    width: 100%;
+    padding: 0px;
+    z-index: 10;
+    background: $main_menu_bg;
+    height: $main_menu_heigh;
+    border-bottom: 1px solid $main_menu_bg_darker;
+}
+.nav-logo {
+    padding-top: 10px;
+    padding-left: 10px;
+    width: 10px;
+    height: 50px;
+    position: absolute;
+    z-index: 11;
+    left: 0px;
+    float:left;
+}
+
+.underconstruction {
+ cursor:url("../images/cursor_underconstruction.png"), auto;
+}
+
+
+
+
+
+.menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 0.5em;
+  min-height: 2em;
+  line-height: 1.4em;
+  ul {
+    transition: max-height .25s linear;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+  }
+  li {
+    transition: visibility .25s linear;
+    display: inline-block;
+    padding: .45em 0.5em;
+    margin: 0 .3em;
+  }
+  .navbar-handle {
+    position: absolute;
+    font-size: 1.2em;
+    top: 0.7em;
+    right: 12px;
+    z-index: 10;    
+  }
+    li a {
+        z-index: 30;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+}
+
+
+
+
+
+
+.navbar-checkbox {
+    display: none;
+}
+.navbar-handle {   //small button
+    display: none;
+    cursor: pointer;
+    position: relative;
+    font-size: $main_menu_heigh;
+    padding: .5em 0;
+    height: 0;
+    width: 1em * 75px / $main_menu_heigh;
+    border-top: (1em * 6px / $main_menu_heigh) solid;
+
+    &:before, &:after {
+        position: absolute;
+        left: 0;
+        right: 0;
+        content: ' ';
+        border-top: (1em * 6px / $main_menu_heigh) solid;
+    }
+    &:before {
+        top: 1em * 17px / $main_menu_heigh;
+    }
+
+    &:after {
+        top: 1em * 40px / $main_menu_heigh;
+    }
+}
+
+@media (min-width : 551px) {  //BIG
+    .current_page {
+        border-bottom: 4px solid $second_color;
+    }
+    .container-nav {
+        max-width: $max_width;
+        margin: 0 auto;
+        height: 100px;
+        position: relative;
+    }
+    .menu > ul {
+
+        float:right;
+    }
+    .nav-logo {
+        top: 0px; 
+    }
+}
+
+
+
+
+@keyframes logo_go_up {
+    0% {
+        top: 65px;
+        left: 10px;
+    }
+    50% {
+        transform: rotateZ(-2deg);
+    }
+    70% {
+        top: 30px;
+        left: 118px;
+    }
+    100% {
+        top: 32px;
+        left: 120px;
+    }
+    35% {
+        transform: scale(1.1, 1.1);
+    }
+    70% {
+        transform: scale(0.9, 0.9);
+    }
+}
+@keyframes logo_go_down {
+    0% {
+        top: 32px;
+        left: 120px;
+    }
+    30% {
+        transform: rotateZ(2deg);
+    }
+    20% {
+        left: 130px;
+    }
+    70% {
+        transform: rotateZ(-2deg);
+    }
+    75% {
+        top: 64px;
+        left: 11px;
+    }
+    100% {
+        top: 65px;
+        left: 10px;
+    }
+    35% {
+        transform: scale(0.9, 0.9);
+    }
+    70% {
+        transform: scale(1.1, 1.1);
+    }
+}
+@keyframes logo_scale {
+    0% {
+    }
+    20% {
+       transform: scale(0.9, 0.9);
+    }
+    70% {
+        transform: scale(1.1, 1.1);
+    }
+    100% {
+        transform: scale(1, 1);
+    }
+    40% {
+        transform: rotateZ(1deg);
+    }
+    80% {
+        transform: rotateZ(-0.5deg);
+    }
+}
+
+.nav-logo h3 {
+    animation-timing-function: ease;
+    width: 140px;
+    z-index: -1;
+    position: absolute;
+    line-height: 0.5em;
+    font-style: italic;
+    text-shadow: 3px 3px 3px black;
+}
+.nav-logo h3 {
+    animation: logo_go_up 1.4s;
+    animation-direction:normal;
+    top: 32px;
+    left: 120px; 
+     transition: all .3s ease-in-out;
+}
+.nav-logo h3:hover {
+     transform: scale(1.1,1.1) rotateZ(1deg);
+}
+.nav-logo img {
+    position: absolute;
+    top: 20px;
+    left:15px;
+    width: 90px;
+    transition: all .3s ease-in-out;
+}
+.nav-logo img:hover {
+     transform: scale(1.2,1.2) rotateZ(3deg);
+}
+
+    
+@media (max-width : 670px) {
+    .nav-logo h3 {
+        top: 65px;
+        left: 10px;
+        animation: logo_go_down 1.4s;
+        animation-direction:normal;
+    }
+}
+
+
+@media (max-width : 550px) { // SMALL
+  .menu {
+    background: $main_menu_bg;
+    border-bottom: 1px solid $main_menu_bg_darker;
+    ul {
+      max-height: 0;
+      overflow: hidden;
+      margin: 0 3.5em 0 1em;
+    }
+    li {
+      visibility: hidden;
+      display: block;
+      padding: 0.5em 0.6em;
+      border: none;
+    }
+    .navbar-handle {
+      display: block;
+    }
+  }
+  
+  #navbar-checkbox:checked + .menu {
+    ul {
+      max-height: 300px; // Set this to the maximum height your menu will ever have.
+    }
+    
+    li {
+      visibility: visible;
+    }
+    .navbar-handle {
+      &, &:after, &:before {
+        border-color: #aaa;
+      }
+    }
+  }
+}
