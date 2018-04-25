@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+    <head>
+        <style>
+        .path {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: dash 5s linear alternate infinite;
+}
+
+@keyframes dash {
+  from {
+    stroke-dashoffset: 1000;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.svg-container {
+    width: 300px;
+    height: 300px;
+}
+</style>
+    </head>
+    <body>
+        <h1>demo</h1>
+<div class="svg-container">
+        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+        viewBox="0 0 340 333" enable-background="new 0 0 340 333" xml:space="preserve">
+  
+    <path class="path" fill="transparent" stroke="#000000" stroke-width="4" stroke-miterlimit="10" 
+    d="M10 80 C 40 10, 65 10, 95 80 S 150 150, 180 80"
+      />
+    
+  </svg>
+</div>
+
+
+    </body>
+</html>
