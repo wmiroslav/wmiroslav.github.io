@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>AirTraffic by Miroslav Vislavski</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+
+    <div id="loading-spinner" class="lds-ripple hidden"><div></div><div></div></div>
+
+    <section id="selected-airplane" class="hidden modal-container padding">
+        <button id="close-airplane" class="closeBtn">X</button>
+        <div class="modal fadein-and-move">
+            <h3>Manufacture: <span id="manufacture"></span></h3>
+            <h4>Model: <span id="model"></span></h4>
+            <hr>
+            <div class="m-t m-b">
+                <p>Destination: <span id="destination"></span></p>
+                <p>Flight origin airport: <span id="origin"></span></p>
+            </div>
+            <hr>
+            <div class="m-t m-b">
+                <img id="logo" onerror="this.src='images/noImage.png'" src="" />
+            </div>
+        </div>
+    </section>
+
+    <section class="container padding">
+        <h1 class="light fadein title">AirTraffic</h1>
+        <div id="questionWrapper" class="center question-wrapper fadein-and-scale">
+            <h4 class="center fadein">Enable geolocation?</h4>
+            <button id="allowLocation">Use my location</button>
+            <button class="warning-btn" id="deniedLocation">Don't use my location</button>
+            <p class="warning-msg light" id="warning"> </p>
+        </div>
+        <div id="airplanes-container" class="hidden">
+            <p class="list-heading">
+                <span class="icon-orientation">Direction</span>
+                <span class="altitude">Altitude</span>
+                <span class="long-text code-number">Flight code numbe</span>
+            </p>
+            <ul id='list' class="airplane-list">
+            </ul>
+        </div>
+    </section>
+
+    <div class="airplane-animation">
+        <img class="cloud cloud01" src="./images/cloud1.png" />
+        <img class="cloud cloud02" src="./images/cloud2.png" />
+        <img class="cloud cloud02" src="./images/cloud3.png" />
+        <div class="airplane-container">
+            <img class="airplane" src="./images/airplane.png" />
+        </div>
+        <div class="earth-container">
+            <img class="earth" src="./images/earth.png" />
+        </div>
+    </div>
+
+    <a class="git-link" target="_blank" href="https://github.com/wmiroslav/AirTraffic">Git repository</a>
+    <script type="text/javascript" src="scripts/scripts.min.js"></script>
+    <noscript>
+        <h1>Please, enable Javascipt.</h1>
+    </noscript>
+</body>
+
+</html>
